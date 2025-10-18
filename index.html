@@ -31,26 +31,34 @@
     .wrap{max-width:var(--maxw);margin:28px auto;padding:22px}
 
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand {
+.brand {
   display: flex;
-  align-items: center; /* Centra verticalmente */
-  gap: 14px;
+  flex-direction: column; /* logo arriba, texto abajo */
+  align-items: center; /* centra horizontalmente */
+  justify-content: center;
+  gap: 6px; /* espacio entre logo y texto */
+  text-align: center; /* centra el texto debajo del logo */
 }
 
 .brand img {
-  width: 70px; /* aumentá el tamaño del logo */
-  height: auto; /* mantiene proporciones */
+  width: 85px; /* agranda el logo */
+  height: auto;
   display: block;
   background: none;
   padding: 0;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.brand-text h1 {
+  font-size: 18px; /* más chico */
+  margin: 0;
 }
 
+.brand-text p {
+  font-size: 12px; /* más chico también */
+  color: var(--muted);
+  margin: 0;
+}
+    
     nav{display:flex;gap:14px;align-items:center}
     .search{display:flex;align-items:center;gap:8px;background:var(--glass);padding:8px;border-radius:10px}
     .search input{background:transparent;color:var(--text);border:0;outline:none;width:220px}
@@ -1035,6 +1043,7 @@ Cámara triple y batería 5000 mAh.`
   </script>
 </body>
 </html>
+
 
 
 
