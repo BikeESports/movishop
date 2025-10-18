@@ -162,25 +162,25 @@
       </nav>
     </header>
 
-    <!-- APPLE - NUEVOS -->
+    <!-- SECCIÓN: iPhones Nuevos -->
     <section id="apple-new" style="margin-top:18px">
       <div class="category-header">
-        <h2 class="section-title">APPLE</h2>
+        <h2 class="section-title">iPhones Nuevos</h2>
         <div class="category-sub">Productos nuevos en stock</div>
       </div>
       <div id="appleNewGrid" class="grid" style="margin-top:12px"></div>
     </section>
 
-    <!-- APPLE - SEMINUEVOS -->
+    <!-- SECCIÓN: iPhones Seminuevos -->
     <section id="apple-used" style="margin-top:28px">
       <div class="category-header">
-        <h2 class="section-title">APPLE (SEMINUEVOS)</h2>
+        <h2 class="section-title">iPhones Seminuevos</h2>
         <div class="category-sub">Equipos controlados y garantizados</div>
       </div>
       <div id="appleUsedGrid" class="grid" style="margin-top:12px"></div>
     </section>
 
-    <!-- SAMSUNG -->
+    <!-- SECCIÓN: SAMSUNG -->
     <section id="samsung" style="margin-top:28px">
       <div class="category-header">
         <h2 class="section-title">SAMSUNG</h2>
@@ -291,15 +291,16 @@
 
         <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
           <button type="button" id="checkoutCancel" class="secondary">Volver</button>
-          <button type="submit" id="checkoutSubmit" class="add">Enviar por WhatsApp</button>
+          <button type="submit" id="checkoutSubmit" class="add">📲 Finalizar compra por WhatsApp</button>
         </div>
       </form>
     </div>
   </div>
 
   <script>
-    /* ------------ DATOS DE PRODUCTOS (con descripciones completas e "incluye") ------------ */
+    /* ------------ DATOS DE PRODUCTOS (descripciones completas e "incluye") ------------ */
     const products = [
+      /* iPhones Nuevos */
       {
         id: "ap-iphone15",
         title: "iPhone 15 128GB 6GB RAM",
@@ -331,7 +332,6 @@ Con el chip A16 Bionic, disfrutás de rendimiento fluido en todo tipo de apps y 
 La cámara principal de 48 MP Fusion logra fotos nítidas y detalladas, mientras que el ultra gran angular suma versatilidad.
 Además, incorpora Dynamic Island, resistencia al agua IP68 y el confiable Ceramic Shield, para un iPhone listo para acompañarte cada día.`
       },
-
       {
         id: "ap-iphone14",
         title: "iPhone 14 128GB 6GB RAM",
@@ -361,7 +361,6 @@ Con el chip A15 Bionic vas a disfrutar fluidez en juegos, apps y multitarea sin 
 La cámara dual de 12 MP mejora las fotos nocturnas y permite grabar en 4K con gran detalle.
 Además, cuenta con funciones de seguridad avanzadas como Detección de Choques y SOS por satélite, junto con Ceramic Shield y resistencia al agua IP68.`
       },
-
       {
         id: "ap-iphone12",
         title: "iPhone 12 256GB 6GB RAM",
@@ -385,7 +384,6 @@ Con el chip A14 Bionic, vas a disfrutar de fluidez en juegos, multitarea y apps 
 Su cámara dual de 12 MP (gran angular y ultra gran angular) captura fotos nítidas de día y de noche, y graba en 4K HDR con gran calidad.
 Además, incluye Ceramic Shield, certificación IP68 y compatibilidad con 5G.`
       },
-
       {
         id: "ap-iphone16",
         title: "iPhone 16 256GB 8GB RAM",
@@ -415,7 +413,6 @@ El chip A18 asegura fluidez en todo lo que hagas: redes, apps, juegos o edición
 Con la cámara principal de 48 MP Fusion y el ultra gran angular de 12 MP vas a capturar fotos y videos nítidos de día y de noche.
 Además, con Dynamic Island, Ceramic Shield y resistencia al agua IP68, tenés un iPhone confiable y preparado para tu día a día.`
       },
-
       {
         id: "ap-iphone17pm",
         title: "iPhone 17 Pro Max 256GB 8GB RAM",
@@ -442,7 +439,6 @@ El chip A19 Pro está diseñado para un rendimiento extremo en gaming, edición 
 Su sistema de cámaras Pro incluye dos sensores de 48 MP y un teleobjetivo tetraprisma de 12 MP con zoom óptico de hasta 6×.
 Además, suma USB-C, Wi-Fi 7, 5G, Ceramic Shield 2 y resistencia IP68.`
       },
-
       {
         id: "ap-iphone17air",
         title: "iPhone 17 Air 256GB 8GB RAM",
@@ -472,7 +468,7 @@ La cámara de 48 MP logra fotos con gran detalle y la cámara frontal de 18 MP m
 Con cuerpo de titanio, Ceramic Shield 2 y resistencia IP68, combina estilo con durabilidad.`
       },
 
-      /* Seminuevos: ejemplos extendidos con descripción completa (tomadas del rtf) */
+      /* iPhones Seminuevos (tomados del RTF completo) */
       {
         id: "ap-iphone14pro-s",
         title: "iPhone 14 Pro 128GB +85%🔋 (Seminuevo)",
@@ -494,7 +490,145 @@ El chip A16 Bionic le da potencia y eficiencia para todo tipo de apps y juegos.
 Además, el sistema de cámaras Pro de 48 MP capta fotos y videos espectaculares incluso en condiciones de poca luz.
 Con modo cine 4K, detección de choques y resistencia IP68, este modelo sigue siendo uno de los más completos de Apple.`
       },
+      {
+        id: "ap-iphone15pro-s",
+        title: "iPhone 15 Pro 128GB +85%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 1574300,
+        priceStr: "$1.574.300",
+        category: "apple-used",
+        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/15-pro-negro-900x900.jpg"],
+        colors: [{name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/15-pro-negro-900x900.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 15 Pro (128 GB)
+- Cable USB-C de carga (1 m)
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 15 Pro se destaca por su diseño de titanio, más liviano y resistente.
+Con una pantalla Super Retina XDR de 6,1" y ProMotion 120 Hz, todo se ve fluido y vibrante.
+El chip A17 Pro te da potencia para juegos de nivel consola, edición de video en 4K y multitarea exigente.
+Su sistema de cámaras Pro de 48 MP ofrece fotos y videos de altísima calidad.` 
+      },
+      {
+        id: "ap-iphone13pro-s",
+        title: "iPhone 13 Pro 128GB +85%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 1060000,
+        priceStr: "$1.060.000",
+        category: "apple-used",
+        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13pro_max_sierra_blue1-100x100.jpg"],
+        colors: [{name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13pro_max_sierra_blue1-100x100.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 13 Pro (128 GB)
+- Cable Lightning a USB-C
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 13 Pro fue diseñado para quienes buscan potencia y fotografía de nivel profesional en un formato compacto de 6,1".
+Su pantalla Super Retina XDR con ProMotion 120 Hz ofrece brillo, fluidez y contraste espectaculares.
+El chip A15 Bionic con GPU de 5 núcleos brinda un rendimiento veloz y eficiente en juegos, edición de video y multitarea.`
+      },
+      {
+        id: "ap-iphone14-s",
+        title: "iPhone 14 128GB (Excelente) 90-100%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 888600,
+        priceStr: "$888.600",
+        category: "apple-used",
+        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14_blue1.jpg"],
+        colors: [{name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14_blue1.jpg"}, {name:'Blanco', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14_starlight1.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 14 (128 GB)
+- Cable Lightning a USB-C
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 14 combina potencia y simplicidad en un diseño elegante.
+Su pantalla Super Retina XDR de 6,1" ofrece colores vibrantes y gran brillo, perfecta para redes sociales, fotos y videos.
+El chip A15 Bionic asegura un rendimiento rápido y eficiente, con multitarea fluida y soporte para juegos exigentes.`
+      },
+      {
+        id: "ap-iphone13max-s",
+        title: "iPhone 13 Pro Max 128GB (Excelente) 90-100%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 1124300,
+        priceStr: "$1.124.300",
+        category: "apple-used",
+        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/Iphone_13pro_max_grafhite1.jpg"],
+        colors: [{name:'Grafito', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/Iphone_13pro_max_grafhite1.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 13 Pro Max (128 GB)
+- Cable Lightning a USB-C
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 13 Pro Max es un modelo pensado para quienes buscan la máxima pantalla y autonomía.
+Su pantalla Super Retina XDR de 6,7" con ProMotion 120 Hz brinda fluidez y colores espectaculares.
+El chip A15 Bionic con GPU de 5 núcleos garantiza potencia de sobra para juegos y edición de fotos.`
+      },
+      {
+        id: "ap-iphone13-256-s",
+        title: "iPhone 13 256GB (Excelente) 95%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 867200,
+        priceStr: "$867.200",
+        category: "apple-used",
+        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13_blue1.jpg"],
+        colors: [{name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13_blue1.jpg"}, {name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13_midnight1.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 13 (256 GB)
+- Cable Lightning a USB-C
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 13 se mantiene como uno de los modelos más equilibrados de Apple.
+Con su pantalla Super Retina XDR de 6,1" y el chip A15 Bionic ofrece potencia y duración.`
+      },
+      {
+        id: "ap-iphone13pro-256-s",
+        title: "iPhone 13 Pro 256GB +85%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 1124300,
+        priceStr: "$1.124.300",
+        category: "apple-used",
+        images: [
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13pro_max_sierra_blue1.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13pro_max_silver1.jpg"
+        ],
+        colors: [{name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13pro_max_sierra_blue1.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 13 Pro (256 GB)
+- Cable Lightning a USB-C
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 13 Pro fue diseñado para quienes buscan potencia y fotografía de nivel profesional en un formato compacto de 6,1".`
+      },
+      {
+        id: "ap-iphone15-s",
+        title: "iPhone 15 128GB (Excelente) 95%🔋 (Seminuevo)",
+        brand: "Apple",
+        price: 1163000,
+        priceStr: "$1.163.000",
+        category: "apple-used",
+        images: [
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/15-azul-900x900.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/15-negro.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/15-rosa-1-900x900.jpg"
+        ],
+        colors: [{name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/15-azul-900x900.jpg"}, {name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/15-negro.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 15 (128 GB)
+- Cable USB-C de carga (1 m)
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 15 es moderno, liviano y potente, pensado para que disfrutes al máximo tu día a día.
+Su pantalla Super Retina XDR de 6,1" ofrece brillo y definición en cada detalle.`
+      },
 
+      /* Samsung */
       {
         id: "sm-zflip7",
         title: "Samsung Z Flip 7 512GB 12GB",
@@ -509,7 +643,6 @@ Con modo cine 4K, detección de choques y resistencia IP68, este modelo sigue si
 Procesador MediaTek Helio G99 Octa-Core.
 Cámara triple con lente principal de 50MP y batería 5000mAh.`
       },
-
       {
         id: "sm-a06",
         title: "Samsung A06 128GB 6GB",
@@ -532,7 +665,6 @@ Cámara triple con lente principal de 50MP y batería 5000mAh.`
 Procesador Unisoc de 8 núcleos con 6GB de RAM.
 Cámara dual 50MP + 2MP y batería 5000 mAh.`
       },
-
       {
         id: "sm-a16",
         title: "Samsung A16 256GB 8GB",
@@ -547,7 +679,6 @@ Cámara dual 50MP + 2MP y batería 5000 mAh.`
 Procesador MediaTek Helio G99 Octa-Core con 8GB de RAM.
 Cámara triple y batería 5000 mAh.`
       },
-
       {
         id: "sm-a17",
         title: "Samsung A17 5G 256GB 8GB",
@@ -572,11 +703,15 @@ Cámara triple y batería 5000 mAh.`
       const card = document.createElement('article');
       card.className='product';
       const imgUrl = (p.images && p.images.length) ? p.images[0] : '';
+      const semitag = p.category === 'apple-used' ? '<span style="background:#fff7ed;padding:4px 8px;border-radius:6px;font-size:12px;color:#b45309;border:1px solid rgba(180,83,9,0.08);margin-left:6px">Seminuevo</span>' : '';
       const colorsHtml = (p.colors && p.colors.length) ? `<div style="margin-top:8px" class="color-pick">${p.colors.map(c=>`<button class="color-dot" data-id="${p.id}" data-img="${c.img}" title="${c.name}">${c.name[0]}</button>`).join('')}</div>` : '';
       card.innerHTML = `
         <div class="thumb"><img src="${imgUrl}" alt="${p.title}"></div>
         <div>
-          <div class="prod-title">${p.title}</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div class="prod-title">${p.title}</div>
+            ${semitag}
+          </div>
           <div class="prod-desc">${(p.longDesc||'').split('\\n')[0]}</div>
           ${colorsHtml}
         </div>
@@ -709,10 +844,10 @@ Cámara triple y batería 5000 mAh.`
     });
 
     /* ------------ WhatsApp open para consultas ------------ */
-    const phone = '5492352441553'; // número confirmado por vos
+    const phone = '5492352441553'; // número confirmado
     function openWhats(product){
-      const text = `Hola! Estoy interesado en el ${product.title} — Consulto disponibilidad y precio.`;
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      const textPlain = `Hola! Estoy interesado en el ${product.title} — Consulto disponibilidad y precio.`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(textPlain)}`;
       window.open(url,'_blank');
     }
 
@@ -833,32 +968,27 @@ Cámara triple y batería 5000 mAh.`
         notes: document.getElementById('notes').value.trim(),
         domicile: document.getElementById('domicile').value
       };
-      // build message
+      // build plain message
       const sum = cart.reduce((s,i)=>s + (i.price * i.qty),0);
-      let msg = `🛒 *Nuevo pedido*%0A%0A`;
+      let msgPlain = `🛒 Nuevo pedido\n\n`;
       cart.forEach(i=>{
-        msg += `• ${i.title} x${i.qty} — ${i.priceStr}%0A`;
+        msgPlain += `• ${i.title} x${i.qty} — ${i.priceStr}\n`;
       });
-      msg += `%0A*Total:* ${formatMoney(sum)}%0A*Envío:* Gratis%0A%0A`;
-      msg += `📦 *Datos de entrega*%0A`;
-      msg += `Nombre: ${encodeURIComponent(data.name)}%0A`;
-      msg += `Dirección: ${encodeURIComponent(data.address)}%0A`;
-      msg += `CP: ${encodeURIComponent(data.cp)}%0A`;
-      msg += `Provincia: ${encodeURIComponent(data.prov)}%0A`;
-      msg += `Ciudad: ${encodeURIComponent(data.city)}%0A`;
-      if(data.depto) msg += `Departamento: ${encodeURIComponent(data.depto)}%0A`;
-      if(data.notes) msg += `Indicaciones: ${encodeURIComponent(data.notes)}%0A`;
-      msg += `Tipo de domicilio: ${encodeURIComponent(data.domicile)}`;
+      msgPlain += `\nTotal: ${formatMoney(sum)}\nEnvío: Gratis\n\n`;
+      msgPlain += `📦 Datos de entrega\n`;
+      msgPlain += `Nombre: ${data.name}\n`;
+      msgPlain += `Dirección: ${data.address}\n`;
+      msgPlain += `CP: ${data.cp}\n`;
+      msgPlain += `Provincia: ${data.prov}\n`;
+      msgPlain += `Ciudad: ${data.city}\n`;
+      if(data.depto) msgPlain += `Departamento: ${data.depto}\n`;
+      if(data.notes) msgPlain += `Indicaciones: ${data.notes}\n`;
+      msgPlain += `Tipo de domicilio: ${data.domicile}`;
 
-      // final wa link
-      const waLink = `https://wa.me/${phone}?text=${msg}`;
+      // final wa link (encode the whole message)
+      const waLink = `https://wa.me/${phone}?text=${encodeURIComponent(msgPlain)}`;
       // open whatsapp
       window.open(waLink, '_blank');
-
-      // optionally: clear cart & form
-      // localStorage.removeItem('movitech_cart');
-      // cart = [];
-      // updateCartUI();
 
       alert('Se abrirá WhatsApp para confirmar el pedido. Recomendamos verificar los datos antes de enviar.');
       checkoutBack.style.display = 'none';
