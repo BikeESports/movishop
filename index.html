@@ -13,7 +13,7 @@
       --accent-2: #38bdf8; /* celeste claro */
       --muted: #64748b;
       --text: #0f172a;
-      --glass: rgba(6,182,212,0.08);
+      --glass: rgba(6,182,212,0.06);
       --radius: 12px;
       --maxw: 1200px;
       --whatsapp: #25D366;
@@ -44,79 +44,94 @@
 
     .product{
       background: #fff;
-      border: 1px solid rgba(6,182,212,0.12);
+      border: 1px solid rgba(6,182,212,0.08);
       border-radius:12px;padding:12px;
-      display:flex;flex-direction:column;gap:10px;min-height:300px;
+      display:flex;flex-direction:column;gap:10px;min-height:330px;
       transition:transform .14s,box-shadow .14s;
     }
-    .product:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(6,182,212,0.08)}
-    .thumb{height:170px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#eafcff,#d8f7ff);overflow:hidden}
+    .product:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(6,182,212,0.06)}
+    .thumb{height:180px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#eafcff,#d8f7ff);overflow:hidden}
     .thumb img{width:100%;height:100%;object-fit:cover}
 
-    .prod-title{font-weight:800;font-size:15px}
+    .prod-title{font-weight:800;font-size:15px;cursor:pointer}
     .prod-desc{color:var(--muted);font-size:13px;min-height:44px}
     .price-row{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:6px;
-  margin-top:auto;
-}
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:6px;
+      margin-top:auto;
+    }
     .price{font-weight:900;font-size:16px;color:var(--accent)}
     .btns{display:flex;gap:8px}
-   .add{
-  background:var(--accent-2);
-  padding:6px 10px;
-  border-radius:8px;
-  color:white;
-  font-weight:600;
-  font-size:13px;
-  border:none;
-  cursor:pointer;
-}
+    .add{
+      background:var(--accent-2);
+      padding:8px 12px;
+      border-radius:8px;
+      color:white;
+      font-weight:700;
+      font-size:13px;
+      border:none;
+      cursor:pointer;
+    }
 
-.whats{
-  background:#25D366;
-  padding:6px 10px;
-  border-radius:8px;
-  color:white;
-  font-weight:600;
-  font-size:13px;
-  border:none;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
+    .whats{
+      background:var(--whatsapp);
+      padding:8px 12px;
+      border-radius:8px;
+      color:white;
+      font-weight:700;
+      font-size:13px;
+      border:none;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
 
-.secondary{
-  background:transparent;
-  border:1px solid rgba(6,182,212,0.12);
-  padding:6px 10px;
-  border-radius:8px;
-  color:var(--text);
-  font-weight:600;
-  font-size:13px;
-  cursor:pointer;
-}
+    .secondary{
+      background:transparent;
+      border:1px solid rgba(6,182,212,0.12);
+      padding:6px 10px;
+      border-radius:8px;
+      color:var(--text);
+      font-weight:600;
+      font-size:13px;
+      cursor:pointer;
+    }
 
-    /* Categories header */
-    .category-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .category-sub{color:var(--muted);font-size:13px}
+    /* product modal gallery */
+    .gallery{display:flex;flex-direction:column;gap:8px}
+    .main-img{border-radius:10px;overflow:hidden;min-height:320px;display:flex;align-items:center;justify-content:center;background:white;border:1px solid #eef6fb}
+    .thumbs-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .thumbs-row button{border:1px solid transparent;background:transparent;padding:4px;border-radius:8px;cursor:pointer;display:inline-flex}
+    .thumbs-row button.active{border-color:rgba(6,182,212,0.16);box-shadow:0 6px 18px rgba(6,182,212,0.06)}
+
+    .color-pick{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+    .color-dot{width:28px;height:28px;border-radius:999px;border:1px solid rgba(15,23,42,0.06);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
 
     /* Modal (detalle / compra) */
     .modal-back{position:fixed;inset:0;background:rgba(2,6,23,0.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
     .modal{background:white;border-radius:12px;max-width:900px;width:100%;padding:18px;color:var(--text);box-shadow:0 20px 60px rgba(2,6,23,0.3)}
     .modal .modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .close-btn{background:transparent;border:0;font-weight:800;font-size:18px;cursor:pointer}
+    .close-btn{background:transparent;border:0;font-weight:800;font-size:22px;cursor:pointer}
 
     /* small cart preview */
-    .mini-cart{position:absolute;right:24px;top:74px;background:white;border-radius:10px;padding:12px;border:1px solid rgba(6,182,212,0.12);box-shadow:0 10px 30px rgba(2,6,23,0.08);min-width:260px;display:none}
+    .mini-cart{position:absolute;right:24px;top:74px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(248,250,252,0.9));backdrop-filter: blur(6px);border-radius:12px;padding:12px;border:1px solid rgba(6,182,212,0.08);box-shadow:0 10px 30px rgba(2,6,23,0.06);min-width:320px;display:none;z-index:70}
     .mini-item{display:flex;gap:8px;align-items:center;margin-bottom:8px}
-    .mini-item img{width:48px;height:48px;object-fit:cover;border-radius:8px}
+    .mini-item img{width:56px;height:56px;object-fit:cover;border-radius:8px}
     .mini-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+    .mini-actions{display:flex;gap:8px;margin-top:10px;justify-content:flex-end}
+
+    /* checkout modal form */
+    .form-row{display:flex;gap:8px}
+    .form-row .col{flex:1}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+    input[type="text"], input[type="tel"], textarea, select{padding:8px;border-radius:8px;border:1px solid #e6eef3;font-size:14px;outline:none}
+    textarea{min-height:80px;resize:vertical}
 
     @media (max-width:900px){.modal .modal-grid{grid-template-columns:1fr}}
+    @media (max-width:700px){.mini-cart{right:12px;left:12px;top:84px}}
   </style>
 </head>
 <body>
@@ -179,7 +194,7 @@
     </footer>
   </div>
 
-  <!-- Modal Detalle / Compra -->
+  <!-- Modal Detalle / Compra (Galería + Descripción completa + Selector de color) -->
   <div id="modalBack" class="modal-back" role="dialog" aria-hidden="true">
     <div class="modal" role="document">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
@@ -189,46 +204,102 @@
       <div class="modal-grid">
         <div id="modalImgs"></div>
         <div>
-          <div id="modalDesc" style="color:var(--muted);margin-bottom:10px"></div>
+          <div id="modalIncludes" style="color:var(--muted);margin-bottom:8px;font-size:13px"></div>
+          <div id="modalDesc" style="color:var(--muted);margin-bottom:10px;font-size:14px"></div>
           <div style="font-weight:900;color:var(--accent);font-size:20px" id="modalPrice"></div>
 
          <div style="margin-top:12px;display:flex;gap:8px">
-  <button id="modalAdd" class="add">Agregar al carrito</button>
-  
-  <a 
-    id="modalWhats" 
-    class="whats" 
-    href="https://wa.me/549235244155?text=Hola%20quiero%20hacer%20una%20consulta" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-      <path 
-        d="M21.7 17.4a11 11 0 10-3.3 3.3l2.3 0.6 0.6-2.3z" 
-        stroke="#fff" 
-        stroke-width="1.2" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"
-      />
-    </svg>
-    Consultar en WhatsApp
-  </a>
-</div>
+           <button id="modalAdd" class="add">Agregar al carrito</button>
+           <a id="modalWhats" class="whats" href="#" target="_blank" rel="noopener noreferrer">
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21.7 17.4a11 11 0 10-3.3 3.3l2.3 .6 .6-2.3z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+             Consultar en WhatsApp
+           </a>
+         </div>
 
           <hr style="margin:12px 0;border:none;border-top:1px solid #eef6fb" />
           <div style="color:var(--muted);font-size:13px">
             <strong>Envío:</strong> Envío gratis a todo el país. Tiempo estimado según provincia.
           </div>
-          <!-- Aquí podés incluir el formulario de dirección si querés -->
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Modal Checkout (formulario) -->
+  <div id="checkoutBack" class="modal-back" role="dialog" aria-hidden="true" style="z-index:80">
+    <div class="modal" role="document" style="max-width:600px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <strong>Finalizar compra</strong>
+        <button class="close-btn" id="checkoutClose">×</button>
+      </div>
+
+      <div id="checkoutItems" style="margin-bottom:12px;color:var(--muted)"></div>
+
+      <form id="checkoutForm">
+        <div class="field">
+          <label>Nombre y apellido</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="field">
+          <label>Dirección o lugar de entrega</label>
+          <input type="text" id="address" required />
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <div class="field">
+              <label>Código Postal</label>
+              <input type="text" id="cp" required />
+            </div>
+          </div>
+          <div class="col">
+            <div class="field">
+              <label>Provincia</label>
+              <input type="text" id="prov" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <div class="field">
+              <label>Ciudad</label>
+              <input type="text" id="city" required />
+            </div>
+          </div>
+          <div class="col">
+            <div class="field">
+              <label>Departamento (opcional)</label>
+              <input type="text" id="depto" />
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Indicaciones para la entrega (opcional)</label>
+          <textarea id="notes"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Tipo de domicilio</label>
+          <select id="domicile">
+            <option>Residencial</option>
+            <option>Laboral</option>
+          </select>
+        </div>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+          <button type="button" id="checkoutCancel" class="secondary">Volver</button>
+          <button type="submit" id="checkoutSubmit" class="add">Enviar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script>
-    /* Productos importados del archivo subido por el usuario */
+    /* ------------ DATOS DE PRODUCTOS (con descripciones completas e "incluye") ------------ */
     const products = [
-      /* APPLE - NUEVOS */
       {
         id: "ap-iphone15",
         title: "iPhone 15 128GB 6GB RAM",
@@ -236,9 +307,31 @@
         price: 1725400,
         priceStr: "$1.725.400",
         category: "apple-new",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/15-negro.jpg","https://loquiero.com.ar/wp-content/uploads/2024/11/ip-15-promax-10-900x900.jpg","https://loquiero.com.ar/wp-content/uploads/2024/05/15-azul-900x900.jpg"],
-        short: "Pantalla 6,1\" · Chip A16 · Cámara 48MP. Nuevo en caja."
+        images: [
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/15-negro.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/11/ip-15-promax-10-900x900.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/05/15-azul-900x900.jpg"
+        ],
+        colors: [
+          {name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/15-negro.jpg"},
+          {name:'Verde', img:"https://loquiero.com.ar/wp-content/uploads/2024/11/ip-15-promax-10-900x900.jpg"},
+          {name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/15-azul-900x900.jpg"}
+        ],
+        includes: `Incluye kit de accesorios:
+- Producto nuevo, en caja sellada por Apple
+- iPhone 15 (128 GB)
+- Cable USB-C de carga (1 m)
+- Documentación oficial Apple
+- Cargador certificado 20W — de regalo
+- Funda — de regalo
+- Vidrio templado — de regalo`,
+        longDesc: `El iPhone 15 te acerca la nueva generación de Apple en un formato compacto y equilibrado.
+Su pantalla Super Retina XDR de 6,1" ofrece colores vibrantes y gran brillo incluso en exteriores.
+Con el chip A16 Bionic, disfrutás de rendimiento fluido en todo tipo de apps y juegos.
+La cámara principal de 48 MP Fusion logra fotos nítidas y detalladas, mientras que el ultra gran angular suma versatilidad.
+Además, incorpora Dynamic Island, resistencia al agua IP68 y el confiable Ceramic Shield, para un iPhone listo para acompañarte cada día.`
       },
+
       {
         id: "ap-iphone14",
         title: "iPhone 14 128GB 6GB RAM",
@@ -246,9 +339,29 @@
         price: 1317100,
         priceStr: "$1.317.100",
         category: "apple-new",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14_starlight1-100x100.jpg","https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14_midnight1.jpg"],
-        short: "Pantalla 6,1\" · Chip A15 · Cámara dual 12MP. Nuevo en caja."
+        images: [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_625567-MLA94923458038_102025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_749076-MLA94915838318_102025-F.webp"
+        ],
+        colors: [
+          {name:'Blanco', img:"https://http2.mlstatic.com/D_NQ_NP_2X_625567-MLA94923458038_102025-F.webp"},
+          {name:'Negro', img:"https://http2.mlstatic.com/D_NQ_NP_2X_749076-MLA94915838318_102025-F.webp"}
+        ],
+        includes: `Incluye kit de accesorios:
+- Producto nuevo, en caja sellada por Apple
+- iPhone 14 (128 GB)
+- Lightning a USB-C de carga (1 m)
+- Documentación oficial Apple
+- Cargador certificado 20W — de regalo
+- Funda — de regalo
+- Vidrio templado — de regalo`,
+        longDesc: `El iPhone 14 es la opción equilibrada para quienes quieren un iPhone moderno con gran cámara y rendimiento confiable.
+Su pantalla Super Retina XDR OLED de 6,1" ofrece colores intensos y brillo ideal en cualquier entorno.
+Con el chip A15 Bionic vas a disfrutar fluidez en juegos, apps y multitarea sin esfuerzo.
+La cámara dual de 12 MP mejora las fotos nocturnas y permite grabar en 4K con gran detalle.
+Además, cuenta con funciones de seguridad avanzadas como Detección de Choques y SOS por satélite, junto con Ceramic Shield y resistencia al agua IP68.`
       },
+
       {
         id: "ap-iphone12",
         title: "iPhone 12 256GB 6GB RAM",
@@ -257,8 +370,22 @@
         priceStr: "$1.017.200",
         category: "apple-new",
         images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_12_purple1.jpg"],
-        short: "256GB · A14 · Excelente rendimiento. Nuevo en caja."
+        colors: [{name:'Violeta', img:"https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_12_purple1.jpg"}],
+        includes: `Incluye kit de accesorios:
+- Producto nuevo, en caja sellada por Apple
+- iPhone 12 (256 GB)
+- Lightning a USB-C de carga (1 m)
+- Documentación oficial Apple
+- Cargador certificado 20W — de regalo
+- Funda — de regalo
+- Vidrio templado — de regalo`,
+        longDesc: `El iPhone 12 en su versión de 256 GB te ofrece espacio de sobra para fotos, videos y aplicaciones, con un diseño liviano y resistente.
+Su pantalla Super Retina XDR OLED de 6,1" muestra colores vibrantes y gran nivel de brillo para cualquier situación.
+Con el chip A14 Bionic, vas a disfrutar de fluidez en juegos, multitarea y apps exigentes.
+Su cámara dual de 12 MP (gran angular y ultra gran angular) captura fotos nítidas de día y de noche, y graba en 4K HDR con gran calidad.
+Además, incluye Ceramic Shield, certificación IP68 y compatibilidad con 5G.`
       },
+
       {
         id: "ap-iphone16",
         title: "iPhone 16 256GB 8GB RAM",
@@ -266,9 +393,29 @@
         price: 2045700,
         priceStr: "$2.045.700",
         category: "apple-new",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/10/iPhone-16-Plus-LoQuiero-4.jpg"],
-        short: "256GB · A18 · Kit MagSafe incluido. Nuevo en caja."
+        images: [
+          "https://loquiero.com.ar/wp-content/uploads/2024/10/iPhone-16-Plus-LoQuiero-4.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/10/iPhone-16-Plus-LoQuiero-10-100x100.jpg"
+        ],
+        colors: [
+          {name:'Cyan', img:"https://loquiero.com.ar/wp-content/uploads/2024/10/iPhone-16-Plus-LoQuiero-4.jpg"},
+          {name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2024/10/iPhone-16-Plus-LoQuiero-10-100x100.jpg"}
+        ],
+        includes: `Incluye Kit MagSafe:
+- Producto nuevo, en caja sellada por Apple
+- iPhone 16 (256 GB)
+- Cable USB-C de carga (1 m)
+- Documentación oficial Apple
+- Base de carga MagSafe — de regalo
+- Battery Pack MagSafe — de regalo
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 16 combina diseño elegante, potencia y una experiencia Apple de última generación.
+Su pantalla Super Retina XDR de 6,1" ofrece colores vibrantes y gran brillo para exteriores.
+El chip A18 asegura fluidez en todo lo que hagas: redes, apps, juegos o edición de fotos.
+Con la cámara principal de 48 MP Fusion y el ultra gran angular de 12 MP vas a capturar fotos y videos nítidos de día y de noche.
+Además, con Dynamic Island, Ceramic Shield y resistencia al agua IP68, tenés un iPhone confiable y preparado para tu día a día.`
       },
+
       {
         id: "ap-iphone17pm",
         title: "iPhone 17 Pro Max 256GB 8GB RAM",
@@ -276,9 +423,26 @@
         price: 3717000,
         priceStr: "$3.717.000",
         category: "apple-new",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2025/09/iP-17-Pro-3-100x100.jpg"],
-        short: "6,9\" · A19 Pro · ProMotion 120Hz. Nuevo en caja."
+        images: [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_799122-MLA94355521936_102025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_884660-MLA94784703557_102025-F.webp"
+        ],
+        colors: [{name:'Azul Francia', img:"https://http2.mlstatic.com/D_NQ_NP_2X_799122-MLA94355521936_102025-F.webp"}, {name:'Naranja', img:"https://http2.mlstatic.com/D_NQ_NP_2X_884660-MLA94784703557_102025-F.webp"}],
+        includes: `Incluye Kit MagSafe:
+- Producto nuevo, en caja sellada por Apple
+- iPhone 17 Pro Max (256 GB)
+- Cable USB-C de carga (1 m)
+- Documentación oficial Apple
+- Base de carga MagSafe — de regalo (promo exclusiva línea 17)
+- Battery Pack MagSafe — de regalo (promo exclusiva línea 17)
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 17 Pro Max es el modelo más grande y potente de la línea 17.
+Su pantalla Super Retina XDR de 6,9" con ProMotion 120 Hz te da la mejor fluidez y detalle en cada imagen.
+El chip A19 Pro está diseñado para un rendimiento extremo en gaming, edición avanzada y funciones de Apple Intelligence.
+Su sistema de cámaras Pro incluye dos sensores de 48 MP y un teleobjetivo tetraprisma de 12 MP con zoom óptico de hasta 6×.
+Además, suma USB-C, Wi-Fi 7, 5G, Ceramic Shield 2 y resistencia IP68.`
       },
+
       {
         id: "ap-iphone17air",
         title: "iPhone 17 Air 256GB 8GB RAM",
@@ -286,11 +450,29 @@
         price: 3031300,
         priceStr: "$3.031.300",
         category: "apple-new",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2025/09/iP-17-Air-5-100x100.jpg"],
-        short: "Ultra delgado · A19 Pro · Diseño en titanio. Nuevo en caja."
+        images: [
+          "https://loquiero.com.ar/wp-content/uploads/2025/09/iP-17-Air-5.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2025/09/iP-17-Air-8.jpg"
+        ],
+        colors: [{name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2025/09/iP-17-Air-5.jpg"}, {name:'Azul', img:"https://loquiero.com.ar/wp-content/uploads/2025/09/iP-17-Air-8.jpg"}],
+        includes: `Incluye:
+- Producto nuevo, en caja sellada por Apple
+- iPhone 17 Air (256 GB)
+- Cable USB-C de carga (1 m)
+- Documentación oficial Apple
+- Cargador certificado 20W — de regalo
+- Funda — de regalo
+- Vidrio templado — de regalo
+- Base de carga MagSafe — de regalo (promo exclusiva línea 17)
+- Battery Pack MagSafe — de regalo (promo exclusiva línea 17)`,
+        longDesc: `El iPhone 17 Air es el modelo más delgado y liviano de la nueva generación, pensado para quienes buscan potencia y diseño en un formato ultrafino.
+Su pantalla OLED de 6,5" con ProMotion 120 Hz y Always-On Display ofrece fluidez y gran claridad de imagen.
+El chip A19 Pro asegura rendimiento de sobra para apps, juegos y Apple Intelligence.
+La cámara de 48 MP logra fotos con gran detalle y la cámara frontal de 18 MP mejora videollamadas y selfies.
+Con cuerpo de titanio, Ceramic Shield 2 y resistencia IP68, combina estilo con durabilidad.`
       },
 
-      /* APPLE - SEMINUEVOS */
+      /* Seminuevos: ejemplos extendidos con descripción completa (tomadas del rtf) */
       {
         id: "ap-iphone14pro-s",
         title: "iPhone 14 Pro 128GB +85%🔋 (Seminuevo)",
@@ -298,71 +480,21 @@
         price: 1274300,
         priceStr: "$1.274.300",
         category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14pro_max_dark_purple1-100x100.jpg"],
-        short: "Seminuevo garantizado - 6 meses de garantía."
-      },
-      {
-        id: "ap-iphone15pro-s",
-        title: "iPhone 15 Pro 128GB +85%🔋 (Seminuevo)",
-        brand: "Apple",
-        price: 1574300,
-        priceStr: "$1.574.300",
-        category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/15-pro-negro-900x900.jpg"],
-        short: "Seminuevo controlado - Garantía 6 meses."
-      },
-      {
-        id: "ap-iphone13pro-s",
-        title: "iPhone 13 Pro 128GB +85%🔋 (Seminuevo)",
-        brand: "Apple",
-        price: 1060000,
-        priceStr: "$1.060.000",
-        category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13pro_max_sierra_blue1-100x100.jpg"],
-        short: "Seminuevo garantizado - buen estado."
-      },
-      {
-        id: "ap-iphone14-s",
-        title: "iPhone 14 128GB (Excelente) 90-100%🔋 (Seminuevo)",
-        brand: "Apple",
-        price: 888600,
-        priceStr: "$888.600",
-        category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_14_blue1.jpg"],
-        short: "Seminuevo en excelente estado - garantía incluida."
-      },
-      {
-        id: "ap-iphone13max-s",
-        title: "iPhone 13 Pro Max 128GB (Excelente) (Seminuevo)",
-        brand: "Apple",
-        price: 1124300,
-        priceStr: "$1.124.300",
-        category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/Iphone_13pro_max_grafhite1.jpg"],
-        short: "Seminuevo - alto rendimiento y batería cuidada."
-      },
-      {
-        id: "ap-iphone13-256-s",
-        title: "iPhone 13 256GB (Excelente) 95%🔋 (Seminuevo)",
-        brand: "Apple",
-        price: 867200,
-        priceStr: "$867.200",
-        category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/iPhone_13_blue1.jpg"],
-        short: "Seminuevo equilibrado - ideal relación precio/funciones."
-      },
-      {
-        id: "ap-iphone15-s",
-        title: "iPhone 15 128GB (Excelente) 95%🔋 (Seminuevo)",
-        brand: "Apple",
-        price: 1163000,
-        priceStr: "$1.163.000",
-        category: "apple-used",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/05/15-azul-900x900.jpg"],
-        short: "Seminuevo controlado, garantía 6 meses."
+        images: ["https://http2.mlstatic.com/D_NQ_NP_2X_898029-MLA95399189359_102025-F.webp"],
+        colors: [{name:'Violeta', img:"https://http2.mlstatic.com/D_NQ_NP_2X_898029-MLA95399189359_102025-F.webp"}],
+        includes: `Incluye kit de accesorios:
+- Producto seminuevo, controlado y garantizado por LoQuiero
+- iPhone 14 Pro (128 GB)
+- Cable Lightning a USB-C
+- Garantía escrita por 6 meses
+- Extras incluidos: cargador 20W, funda y vidrio templado`,
+        longDesc: `El iPhone 14 Pro es un salto en diseño y funcionalidad gracias a la Dynamic Island, que integra alertas y notificaciones en tiempo real de una manera fluida.
+Su pantalla Super Retina XDR de 6,1" con ProMotion 120 Hz asegura imágenes fluidas y brillantes.
+El chip A16 Bionic le da potencia y eficiencia para todo tipo de apps y juegos.
+Además, el sistema de cámaras Pro de 48 MP capta fotos y videos espectaculares incluso en condiciones de poca luz.
+Con modo cine 4K, detección de choques y resistencia IP68, este modelo sigue siendo uno de los más completos de Apple.`
       },
 
-      /* SAMSUNG */
       {
         id: "sm-zflip7",
         title: "Samsung Z Flip 7 512GB 12GB",
@@ -370,9 +502,14 @@
         price: 2123100,
         priceStr: "$2.123.100",
         category: "samsung",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2025/09/Z-FLIP-7-2-100x100.jpg"],
-        short: "Pantalla FHD+ · Cámara 50MP · Batería 5000mAh."
+        images: ["https://http2.mlstatic.com/D_NQ_NP_2X_768415-MLA94915819558_102025-F.webp"],
+        colors: [{name:'Negro', img:"https://http2.mlstatic.com/D_NQ_NP_2X_768415-MLA94915819558_102025-F.webp"}],
+        includes: ``,
+        longDesc: `Pantalla FHD+ de 6.5’ con resolucion FHD+ y tasa de refresco de 90Hz.
+Procesador MediaTek Helio G99 Octa-Core.
+Cámara triple con lente principal de 50MP y batería 5000mAh.`
       },
+
       {
         id: "sm-a06",
         title: "Samsung A06 128GB 6GB",
@@ -380,9 +517,22 @@
         price: 288600,
         priceStr: "$288.600",
         category: "samsung",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Negro-100x100.jpg"],
-        short: "Pantalla 6.7\" · Batería 5000mAh · Excelente relación precio."
+        images: [
+          "https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Negro.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Light-Blue.jpg",
+          "https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Light-Green.jpg"
+        ],
+        colors: [
+          {name:'Negro', img:"https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Negro.jpg"},
+          {name:'Light Blue', img:"https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Light-Blue.jpg"},
+          {name:'Light Green', img:"https://loquiero.com.ar/wp-content/uploads/2024/10/Samsung-A06-Light-Green.jpg"}
+        ],
+        includes: ``,
+        longDesc: `Pantalla 6.7” PLS HD+.
+Procesador Unisoc de 8 núcleos con 6GB de RAM.
+Cámara dual 50MP + 2MP y batería 5000 mAh.`
       },
+
       {
         id: "sm-a16",
         title: "Samsung A16 256GB 8GB",
@@ -390,9 +540,14 @@
         price: 427900,
         priceStr: "$427.900",
         category: "samsung",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2025/04/samsung-A16-blanco-100x100.jpg"],
-        short: "Pantalla FHD+ · 90Hz · Cámara triple 50MP."
+        images: ["https://http2.mlstatic.com/D_NQ_NP_2X_786375-MLA94917194748_102025-F.webp"],
+        colors: [{name:'Blanco', img:"https://http2.mlstatic.com/D_NQ_NP_2X_786375-MLA94917194748_102025-F.webp"}],
+        includes: ``,
+        longDesc: `Pantalla FHD+ de 6.5’ con 90Hz.
+Procesador MediaTek Helio G99 Octa-Core con 8GB de RAM.
+Cámara triple y batería 5000 mAh.`
       },
+
       {
         id: "sm-a17",
         title: "Samsung A17 5G 256GB 8GB",
@@ -400,21 +555,30 @@
         price: 427900,
         priceStr: "$427.900",
         category: "samsung",
-        images: ["https://loquiero.com.ar/wp-content/uploads/2025/09/A17-900x900.jpg"],
-        short: "5G · Pantalla FHD+ · Batería 5000mAh."
+        images: ["https://http2.mlstatic.com/D_NQ_NP_2X_938669-MLA95357830201_102025-F.webp"],
+        colors: [{name:'Azul', img:"https://http2.mlstatic.com/D_NQ_NP_2X_938669-MLA95357830201_102025-F.webp"}],
+        includes: ``,
+        longDesc: `5G · Pantalla FHD+ · Batería 5000mAh.`
       }
     ];
 
-    /* RENDER: función para crear tarjeta */
+    /* ------------ RENDER: tarjetas, modal y comportamiento ------------ */
+
+    function formatMoney(num){
+      return "$" + new Intl.NumberFormat('de-DE').format(num);
+    }
+
     function renderProductCard(p){
       const card = document.createElement('article');
       card.className='product';
       const imgUrl = (p.images && p.images.length) ? p.images[0] : '';
+      const colorsHtml = (p.colors && p.colors.length) ? `<div style="margin-top:8px" class="color-pick">${p.colors.map(c=>`<button class="color-dot" data-id="${p.id}" data-img="${c.img}" title="${c.name}">${c.name[0]}</button>`).join('')}</div>` : '';
       card.innerHTML = `
         <div class="thumb"><img src="${imgUrl}" alt="${p.title}"></div>
         <div>
           <div class="prod-title">${p.title}</div>
-          <div class="prod-desc">${p.short || ''}</div>
+          <div class="prod-desc">${(p.longDesc||'').split('\\n')[0]}</div>
+          ${colorsHtml}
         </div>
         <div class="price-row">
           <div class="price">${p.priceStr}</div>
@@ -435,6 +599,21 @@
       // open modal on image or title click
       card.querySelector('.thumb').addEventListener('click', ()=> openModal(p));
       card.querySelector('.prod-title').addEventListener('click', ()=> openModal(p));
+
+      // color dot handlers (delegated after insert)
+      setTimeout(()=>{
+        card.querySelectorAll('.color-dot').forEach(btn=>{
+          btn.addEventListener('click', (e)=>{
+            const img = e.currentTarget.getAttribute('data-img');
+            const thumb = card.querySelector('.thumb img');
+            if(img) thumb.src = img;
+            // highlight briefly
+            card.querySelectorAll('.color-dot').forEach(d=>d.style.boxShadow='none');
+            e.currentTarget.style.boxShadow = '0 6px 18px rgba(6,182,212,0.1)';
+          });
+        });
+      },10);
+
       return card;
     }
 
@@ -450,7 +629,7 @@
       if(p.category === 'samsung') samsungGrid.appendChild(el);
     });
 
-    /* CART (simulado) */
+    /* ------------ CART (localStorage) ------------ */
     let cart = JSON.parse(localStorage.getItem('movitech_cart')||'[]');
     const cartCount = document.getElementById('cartCount');
     const miniCart = document.getElementById('miniCart');
@@ -476,8 +655,11 @@
       const totalQty = cart.reduce((s,i)=>s+i.qty,0);
       cartCount.textContent = totalQty;
       // mini-cart content
-      if(totalQty === 0){ miniCart.innerHTML = '<div style="color:var(--muted)">No hay productos en el carrito.</div>'; return; }
       miniCart.innerHTML = '';
+      if(totalQty === 0){
+        miniCart.innerHTML = '<div style="color:var(--muted)">No hay productos en el carrito.</div>';
+        return;
+      }
       cart.forEach(item=>{
         const d = document.createElement('div');
         d.className='mini-item';
@@ -487,8 +669,14 @@
       const footer = document.createElement('div');
       footer.className='mini-footer';
       const sum = cart.reduce((s,i)=>s + (i.price * i.qty),0);
-      footer.innerHTML = `<div style="font-weight:800">Total</div><div style="font-weight:900;color:var(--accent)">$${Intl.NumberFormat('de-DE').format(sum)}</div>`;
+      footer.innerHTML = `<div style="font-weight:800">Total</div><div style="font-weight:900;color:var(--accent)">${formatMoney(sum)}</div>`;
       miniCart.appendChild(footer);
+
+      const actions = document.createElement('div');
+      actions.className = 'mini-actions';
+      actions.innerHTML = `<button class="secondary" id="miniCheckout">Ver carrito</button><button class="add" id="miniBuyNow">Comprar ahora</button>`;
+      miniCart.appendChild(actions);
+
       // attach remove events
       miniCart.querySelectorAll('[data-remove]').forEach(btn=>{
         btn.addEventListener('click', e=>{
@@ -498,6 +686,10 @@
           updateCartUI();
         });
       });
+
+      // actions events
+      document.getElementById('miniBuyNow').addEventListener('click', ()=> openCheckout());
+      document.getElementById('miniCheckout').addEventListener('click', ()=> openCheckout());
     }
 
     /* Mini cart toggle */
@@ -505,6 +697,8 @@
     cartBtn.addEventListener('click', (e)=>{
       miniCart.style.display = miniCart.style.display === 'block' ? 'none' : 'block';
       miniCart.setAttribute('aria-hidden', miniCart.style.display === 'none');
+      // populate if open
+      if(miniCart.style.display === 'block') updateCartUI();
     });
 
     // Close mini cart if click outside
@@ -514,37 +708,167 @@
       }
     });
 
-    /* WhatsApp open */
-    const phone = '5492352441553'; // tu contacto
+    /* ------------ WhatsApp open para consultas ------------ */
+    const phone = '5492352441553'; // número confirmado por vos
     function openWhats(product){
-      const text = `Hola!%20Estoy%20interesado%20en%20el%20${encodeURIComponent(product.title)}`;
-      const url = `https://wa.me/${phone}?text=${text}`;
+      const text = `Hola! Estoy interesado en el ${product.title} — Consulto disponibilidad y precio.`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
       window.open(url,'_blank');
     }
 
-    /* Modal detalle */
+    /* ------------ Modal detalle/galleries ------------ */
     const modalBack = document.getElementById('modalBack');
     const modalTitle = document.getElementById('modalTitle');
     const modalImgs = document.getElementById('modalImgs');
     const modalDesc = document.getElementById('modalDesc');
+    const modalIncludes = document.getElementById('modalIncludes');
     const modalPrice = document.getElementById('modalPrice');
     const modalWhats = document.getElementById('modalWhats');
     const modalAdd = document.getElementById('modalAdd');
     const modalClose = document.getElementById('modalClose');
 
+    let currentProduct = null;
     function openModal(product){
+      currentProduct = product;
       modalTitle.textContent = product.title;
-      modalImgs.innerHTML = product.images.map(u=>`<img src="${u}" style="width:100%;border-radius:8px;margin-bottom:8px" alt="${product.title}">`).join('');
-      modalDesc.textContent = product.short || '';
+
+      // build gallery: main + thumbs + colors
+      const gallery = document.createElement('div');
+      gallery.className = 'gallery';
+
+      const main = document.createElement('div');
+      main.className = 'main-img';
+      main.innerHTML = `<img id="modalMainImg" src="${product.images[0]||''}" alt="${product.title}" style="max-height:420px;object-fit:contain">`;
+      gallery.appendChild(main);
+
+      const thumbs = document.createElement('div');
+      thumbs.className = 'thumbs-row';
+      product.images.forEach((u, idx)=>{
+        const b = document.createElement('button');
+        b.innerHTML = `<img src="${u}" alt="thumb" style="width:60px;height:60px;object-fit:cover;border-radius:6px">`;
+        if(idx===0) b.classList.add('active');
+        b.addEventListener('click', ()=>{
+          document.querySelectorAll('.thumbs-row button').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+          document.getElementById('modalMainImg').src = u;
+        });
+        thumbs.appendChild(b);
+      });
+      gallery.appendChild(thumbs);
+
+      // colors selector (if exists)
+      if(product.colors && product.colors.length){
+        const cp = document.createElement('div');
+        cp.className = 'color-pick';
+        product.colors.forEach(c=>{
+          const btn = document.createElement('button');
+          btn.className = 'color-dot';
+          btn.title = c.name;
+          btn.innerText = c.name[0];
+          btn.addEventListener('click', ()=>{
+            // switch main image to that color image (if provided)
+            if(c.img) document.getElementById('modalMainImg').src = c.img;
+            // highlight selection
+            cp.querySelectorAll('.color-dot').forEach(d=>d.style.boxShadow='none');
+            btn.style.boxShadow = '0 6px 18px rgba(6,182,212,0.08)';
+          });
+          cp.appendChild(btn);
+        });
+        gallery.appendChild(cp);
+      }
+
+      modalImgs.innerHTML = '';
+      modalImgs.appendChild(gallery);
+
+      modalIncludes.textContent = product.includes || '';
+      modalDesc.textContent = product.longDesc || product.short || '';
       modalPrice.textContent = product.priceStr;
       modalWhats.href = `https://wa.me/${phone}?text=${encodeURIComponent('Hola! Estoy interesado en el ' + product.title)}`;
-      modalAdd.onclick = ()=> { addToCart(product); };
+      modalAdd.onclick = ()=> { addToCart(product); updateCartUI(); };
+
       modalBack.style.display = 'flex';
       modalBack.setAttribute('aria-hidden','false');
     }
+
     modalClose.addEventListener('click', ()=> { modalBack.style.display='none'; modalBack.setAttribute('aria-hidden','true'); });
 
-    // search filter
+    // Escape to close
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){
+        modalBack.style.display = 'none';
+        checkoutBack.style.display = 'none';
+      }
+    });
+
+    /* ------------ Checkout / Formulario (modal) ------------ */
+    const checkoutBack = document.getElementById('checkoutBack');
+    const checkoutClose = document.getElementById('checkoutClose');
+    const checkoutCancel = document.getElementById('checkoutCancel');
+    const checkoutForm = document.getElementById('checkoutForm');
+    const checkoutItems = document.getElementById('checkoutItems');
+
+    function openCheckout(){
+      if(cart.length === 0) return alert('El carrito está vacío.');
+      // build items summary
+      const lines = cart.map(i=>`${i.title} x${i.qty} — ${i.priceStr}`).join('\n');
+      const sum = cart.reduce((s,i)=>s + (i.price * i.qty),0);
+      checkoutItems.textContent = `Pedido:\n${lines}\n\nTotal: ${formatMoney(sum)}\n\nEnvío: Gratis`;
+      checkoutBack.style.display = 'flex';
+      checkoutBack.setAttribute('aria-hidden','false');
+    }
+
+    checkoutClose.addEventListener('click', ()=> { checkoutBack.style.display='none'; checkoutBack.setAttribute('aria-hidden','true'); });
+    checkoutCancel.addEventListener('click', ()=> { checkoutBack.style.display='none'; checkoutBack.setAttribute('aria-hidden','true'); });
+
+    checkoutForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      // gather form
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        cp: document.getElementById('cp').value.trim(),
+        prov: document.getElementById('prov').value.trim(),
+        city: document.getElementById('city').value.trim(),
+        depto: document.getElementById('depto').value.trim(),
+        notes: document.getElementById('notes').value.trim(),
+        domicile: document.getElementById('domicile').value
+      };
+      // build message
+      const sum = cart.reduce((s,i)=>s + (i.price * i.qty),0);
+      let msg = `🛒 *Nuevo pedido*%0A%0A`;
+      cart.forEach(i=>{
+        msg += `• ${i.title} x${i.qty} — ${i.priceStr}%0A`;
+      });
+      msg += `%0A*Total:* ${formatMoney(sum)}%0A*Envío:* Gratis%0A%0A`;
+      msg += `📦 *Datos de entrega*%0A`;
+      msg += `Nombre: ${encodeURIComponent(data.name)}%0A`;
+      msg += `Dirección: ${encodeURIComponent(data.address)}%0A`;
+      msg += `CP: ${encodeURIComponent(data.cp)}%0A`;
+      msg += `Provincia: ${encodeURIComponent(data.prov)}%0A`;
+      msg += `Ciudad: ${encodeURIComponent(data.city)}%0A`;
+      if(data.depto) msg += `Departamento: ${encodeURIComponent(data.depto)}%0A`;
+      if(data.notes) msg += `Indicaciones: ${encodeURIComponent(data.notes)}%0A`;
+      msg += `Tipo de domicilio: ${encodeURIComponent(data.domicile)}`;
+
+      // final wa link
+      const waLink = `https://wa.me/${phone}?text=${msg}`;
+      // open whatsapp
+      window.open(waLink, '_blank');
+
+      // optionally: clear cart & form
+      // localStorage.removeItem('movitech_cart');
+      // cart = [];
+      // updateCartUI();
+
+      alert('Se abrirá WhatsApp para confirmar el pedido. Recomendamos verificar los datos antes de enviar.');
+      checkoutBack.style.display = 'none';
+      checkoutBack.setAttribute('aria-hidden','true');
+    });
+
+    /* Initialize mini cart display */
+    if(!miniCart.innerHTML) updateCartUI();
+
+    /* Search filter */
     const search = document.getElementById('search');
     search.addEventListener('input', e=>{
       const q = e.target.value.trim().toLowerCase();
@@ -554,17 +878,10 @@
       });
     });
 
-    // simple accessibility: close modal with escape
-    document.addEventListener('keydown', (e)=>{
-      if(e.key === 'Escape') modalBack.style.display = 'none';
-    });
+    // Accessibility: close modals clicking background
+    modalBack.addEventListener('click', (e)=>{ if(e.target === modalBack) modalBack.style.display='none'; });
+    checkoutBack.addEventListener('click', (e)=>{ if(e.target === checkoutBack) checkoutBack.style.display='none'; });
 
-    // Initialize mini cart display text
-    if(!miniCart.innerHTML) updateCartUI();
   </script>
 </body>
 </html>
-
-
-
-
