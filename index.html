@@ -30,7 +30,33 @@
 
     .wrap{max-width:var(--maxw);margin:28px auto;padding:22px}
 
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .header-logo {
+  display: flex;
+  justify-content: center; /* Centra el logo horizontalmente */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px; /* separa un poco del borde superior */
+}
+
+.header-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 2px;
+  text-align: left; /* mueve el subtítulo hacia la izquierda */
+  margin-left: 20px; /* ajustá este valor hasta que quede justo debajo del inicio de MovitechAR */
+}
+
 .brand {
   display: flex;
   flex-direction: column; /* logo arriba, texto abajo */
@@ -1043,6 +1069,7 @@ Cámara triple y batería 5000 mAh.`
   </script>
 </body>
 </html>
+
 
 
 
