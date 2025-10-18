@@ -865,12 +865,14 @@ Cámara triple y batería 5000 mAh.`
     const appleNewGrid = document.getElementById('appleNewGrid');
     const appleUsedGrid = document.getElementById('appleUsedGrid');
     const samsungGrid = document.getElementById('samsungGrid');
+     const xiaomiGrid = document.getElementById('xiaomiGrid');
 
     products.forEach(p=>{
       const el = renderProductCard(p);
       if(p.category === 'apple-new') appleNewGrid.appendChild(el);
       if(p.category === 'apple-used') appleUsedGrid.appendChild(el);
       if(p.category === 'samsung') samsungGrid.appendChild(el);
+      if(p.category === 'xiaomi') xiaomiGrid.appendChild(el);
     });
 
     /* ------------ CART (localStorage) ------------ */
@@ -1124,6 +1126,7 @@ Cámara triple y batería 5000 mAh.`
   </script>
 </body>
 </html>
+
 
 
 
