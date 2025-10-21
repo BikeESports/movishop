@@ -252,6 +252,25 @@
   <div id="xiaomiGrid" class="grid" style="margin-top:12px"></div>
 </section>
 
+<!-- SECCIÓN: ROPA -->
+<section id="ropa" style="margin-top:28px">
+  <div class="category-header">
+    <h2 class="section-title">ROPA</h2>
+    <div class="category-sub">Nuevas prendas disponibles</div>
+  </div>
+  <div id="ropaGrid" class="grid" style="margin-top:12px"></div>
+</section>
+
+<!-- SECCIÓN: CALZADOS -->
+<section id="calzados" style="margin-top:28px">
+  <div class="category-header">
+    <h2 class="section-title">CALZADOS</h2>
+    <div class="category-sub">Modelos disponibles</div>
+  </div>
+  <div id="calzadosGrid" class="grid" style="margin-top:12px"></div>
+</section>
+
+  
     <footer style="margin-top:28px;color:var(--muted);font-size:13px;text-align:center">
       © Todos Los Derechos De Movishop Integrados
     </footer>
@@ -808,7 +827,24 @@ Cámara triple y batería 5000 mAh.`
         colors: [{name:'Azul', img:"https://http2.mlstatic.com/D_NQ_NP_2X_938669-MLA95357830201_102025-F.webp"}],
         includes: ``,
         longDesc: `5G · Pantalla FHD+ · Batería 5000mAh.`
-      }
+      },
+      
+              /* CALZADOS */
+{
+  id: "cz-zapatillas",
+  title: "Campera Unisex Impermeable",
+  brand: "Ropa",
+  price: 45900,
+  priceStr: "$45.900",
+  category: "ropa",
+  images: ["https://tus-imagenes.com/campera.jpg"],
+  colors: [
+    { name: "Negro", img: "https://tus-imagenes.com/campera.jpg" },
+    { name: "Verde", img: "https://tus-imagenes.com/campera-verde.jpg" }
+  ],
+  includes: "Campera impermeable liviana, ideal para todo el año.",
+  longDesc: "Campera liviana con capucha desmontable, bolsillos con cierre y forro interior térmico."
+},
     ];
 
     /* ------------ RENDER: tarjetas, modal y comportamiento ------------ */
@@ -875,6 +911,8 @@ Cámara triple y batería 5000 mAh.`
     const appleUsedGrid = document.getElementById('appleUsedGrid');
     const samsungGrid = document.getElementById('samsungGrid');
     const xiaomiGrid = document.getElementById('xiaomiGrid');
+    const ropaGrid = document.getElementById('ropaGrid');
+const calzadosGrid = document.getElementById('calzadosGrid');
 
     products.forEach(p=>{
       const el = renderProductCard(p);
@@ -882,6 +920,9 @@ Cámara triple y batería 5000 mAh.`
       if(p.category === 'apple-used') appleUsedGrid.appendChild(el);
       if(p.category === 'samsung') samsungGrid.appendChild(el);
       if(p.category === 'xiaomi') xiaomiGrid.appendChild(el);
+      if(p.category === 'ropa') ropaGrid.appendChild(el);
+if(p.category === 'calzados') calzadosGrid.appendChild(el);
+      
     });
 
     /* ------------ CART (localStorage) ------------ */
@@ -1135,6 +1176,7 @@ Cámara triple y batería 5000 mAh.`
   </script>
 </body>
 </html>
+
 
 
 
