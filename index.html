@@ -54,7 +54,7 @@
   color: #444;
   margin-top: 2px;
   text-align: left; /* mueve el subtítulo hacia la izquierda */
-  margin-left: 20px; /* ajustá este valor hasta que quede justo debajo del inicio de MovitechAR */
+  margin-left: 20px; /* ajustá este valor hasta que quede justo debajo del inicio de Movishop */
 }
 
 .brand {
@@ -192,9 +192,9 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <img src="logo-movitech-ar.png" alt="logo Movitech" />
+        <img src="logo-movishop.png" alt="logo MoviShop" />
         <div>
-          <h1>MovitechAR</h1>
+          <h1>MoviShop</h1>
           <p>Celulares · Accesorios</p>
         </div>
       </div>
@@ -253,7 +253,7 @@
 </section>
 
     <footer style="margin-top:28px;color:var(--muted);font-size:13px;text-align:center">
-      © Todos Los Derechos De MovitechAR Integrados
+      © Todos Los Derechos De Movishop Integrados
     </footer>
   </div>
 
@@ -885,7 +885,7 @@ Cámara triple y batería 5000 mAh.`
     });
 
     /* ------------ CART (localStorage) ------------ */
-    let cart = JSON.parse(localStorage.getItem('movitech_cart')||'[]');
+    let cart = JSON.parse(localStorage.getItem('movishop_cart')||'[]');
     const cartCount = document.getElementById('cartCount');
     const miniCart = document.getElementById('miniCart');
     updateCartUI();
@@ -894,7 +894,7 @@ Cámara triple y batería 5000 mAh.`
       const found = cart.find(i=>i.id===product.id);
       if(found) found.qty++;
       else cart.push({id:product.id,title:product.title,price:product.price,priceStr:product.priceStr,img:product.images[0]||'',qty:1});
-      localStorage.setItem('movitech_cart', JSON.stringify(cart));
+      localStorage.setItem('movishop_cart', JSON.stringify(cart));
       updateCartUI();
       // small feedback
       const elBtn = document.querySelector(`[data-id="${product.id}"].add`);
@@ -937,7 +937,7 @@ Cámara triple y batería 5000 mAh.`
         btn.addEventListener('click', e=>{
           const id = e.currentTarget.getAttribute('data-remove');
           cart = cart.filter(i=>i.id !== id);
-          localStorage.setItem('movitech_cart', JSON.stringify(cart));
+          localStorage.setItem('movishop_cart', JSON.stringify(cart));
           updateCartUI();
         });
       });
@@ -1135,6 +1135,7 @@ Cámara triple y batería 5000 mAh.`
   </script>
 </body>
 </html>
+
 
 
 
